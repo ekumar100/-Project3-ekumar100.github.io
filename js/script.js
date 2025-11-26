@@ -9,17 +9,16 @@ document.addEventListener("DOMContentLoaded", () => {
 function initMap() {
     const centerLoc = { lat: 41.8781, lng: -87.6298 };
     const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 10,                   //Custom zoom level
+        zoom: 10,                   
         center: centerLoc,
-        mapTypeId: "hybrid",        // Custom map type
-        streetViewControl: false    //Remove street view control
+        mapTypeId: "hybrid",        
+        streetViewControl: false    
     });
     const marker = new google.maps.Marker({
         position: centerLoc,
         map: map,
         title: "Chicago"
     });
-// Second marker with info window
 const secondMarkerLoc = { lat: 41.8916, lng: -87.6079 };
 const secondMarker = new google.maps.Marker({
     position: secondMarkerLoc,
@@ -35,7 +34,3 @@ secondMarker.addListener("click", () => {
     infoWindow.open(map, secondMarker);
 });
 }
-
-
-
-
